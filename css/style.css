@@ -9,23 +9,43 @@ body {
   margin: 0 0 0 80px;
 }
 .intro {
-  margin-top: 65px;
+  margin-top: 64px;
   display: flex;
   flex-wrap: none;
   flex-direction: row;
 }
 .intro__overview {
+  flex-basis: 38%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  padding-right: 10%;
 }
 .intro__title {
+  margin-bottom: 40px;
   font-size: 48px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 48px;
 }
+.intro__desc {
+  margin-bottom: 40px;
+  /* padding-right: 10%; */
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.intro__button {
+  border: 0px;
+  border-radius: 10px;
+  width: 135px;
+  height: 55px;
+  background: linear-gradient(#E61E4F,#D70665);
+  color: white;
+  font-weight: 600;
+}
 .intro-cards {
+  flex-basis: 65%;
+  /* flex-grow: 3; */
   display: flex;
   flex-wrap: none;
   flex-direction: row;
@@ -58,11 +78,183 @@ body {
   line-height: 20px;
   text-decoration: underline;
 }
+/* フロー部分 */
+.flow__title {
+  margin-top: 75px;
+  margin-bottom: 55px;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 48px;
+}
+.flow-cards {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: row;
+  width: 100%;
+  overflow: scroll;
+  white-space: nowrap;
+}
+.flow-card {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+  width: 320px;
+}
+.flow-card__img {
+  width: 320px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 40px;
+}
+.flow-card__title {
+  width: 100%;
+  white-space: normal;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+}
+.flow-card__desc {
+  width: 100%;
+  margin: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  white-space: normal;
+}
+/* Choice部分 */
+.choice {
+  margin-bottom: 80px;
+}
+.choice-cards {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: row;
+  width: 100%;
+  overflow: scroll;
+  white-space: nowrap;
+}
+.choice__title {
+  margin-bottom: 55px;
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 48px;
+}
+.choice-card {
+  margin-right: 30px;
+}
+.choice-card__img {
+  width: 185px;
+  height: 125px;
+  border-radius: 10px;
+}
+.choice-card__title {
+  margin: 12px 0 0 0 ;
+  width: 100%;
+  white-space: normal;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+}
+/* Assuarance部分 */
+.assurance-cards {
+  display: flex;
+  flex-wrap: none;
+  flex-direction: row;
+  width: 100%;
+  overflow: scroll;
+  white-space: nowrap;
+}
+.assurance__title {
+  margin-top: 75px;
+  margin-bottom: 45px;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 48px;
+}
+.assurance-card__img {
+  /* width: 185px;
+  height: 125px; */
+  border-radius: 10px;
+  margin-right: 28px;
+  margin-bottom: 24px;
+}
+.assurance-card__title {
+  width: 100%;
+  white-space: normal;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.assurance-card__desc {
+  width: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 25px;
+  white-space: normal;
+}
+.assurance-card__link {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  text-decoration: underline;
+}
+/* Check部分 */
+.check {
+  background-color: #F2ECE2;
+}
+
+/* Support部分 */
+.support {
+  display: flex;
+  flex-direction: row;
+}
+.support__title {
+  flex: 1;
+}
+.support__overview {
+  flex: 1;
+}
+.support-card {
+  display: flex;
+  flex-direction: row;
+}
+.support-card__right {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer部分 */
+.footer {
+  background-color: #F7F7F7;
+}
+.footer-top__links {
+  display: flex;
+  flex-direction: row;
+}
+.footer-top__title {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 17px;
+}
+.footer-top__list {
+  flex: 1;
+}
+.footer-top__link {
+  display: block;
+  color: #484848;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-decoration: none;
+}
 
 @media screen and (max-width: 1128px) {
   
 }
 
 @media screen and (max-width: 744px) {
-
+  
 }
