@@ -10,24 +10,28 @@ body {
 }
 .intro {
   margin-top: 64px;
+  margin-bottom: 125px;
   display: flex;
   flex-wrap: none;
   flex-direction: row;
+  justify-content: space-between;
 }
 .intro__overview {
-  flex-basis: 38%;
+  flex-basis: 35%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 10%;
 }
 .intro__title {
+  max-width: 400px;
   margin-bottom: 40px;
   font-size: 48px;
   font-weight: 700;
   line-height: 48px;
+  /* padding-right: 100px; */
 }
 .intro__desc {
+  max-width: 360px;
   margin-bottom: 40px;
   /* padding-right: 10%; */
   font-size: 18px;
@@ -44,7 +48,7 @@ body {
   font-weight: 600;
 }
 .intro-cards {
-  flex-basis: 65%;
+  flex-basis: 60%;
   /* flex-grow: 3; */
   display: flex;
   flex-wrap: none;
@@ -61,11 +65,14 @@ body {
   margin-right: 40px;
 }
 .intro-card__title {
+  margin-top: 18px;
+  margin-bottom: 15px;
   font-size: 24px;
   font-weight: 800;
   line-height: 24px;
 }
 .intro-card__desc {
+  margin-bottom: 15px;
   color: #222222;
   font-size: 16px;
   font-weight: 200;
