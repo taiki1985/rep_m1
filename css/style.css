@@ -1,29 +1,51 @@
 body {
   font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
 }
-.header__logo {
-  padding-top: 24px;
-  margin-left: 24px;
-}
 .main__container {
   margin: 0 0 0 80px;
 }
-.intro {
+/* .intro {
   margin-top: 64px;
   margin-bottom: 125px;
   display: flex;
   flex-wrap: none;
   flex-direction: row;
   justify-content: space-between;
+} */
+.intro {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: row;
+  height: 765px;
+}
+/* .intro-header__logo {
+  padding-top: 24px;
+  margin-left: 24px;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+} */
+.intro-header {
+  /* padding-top: 24px;
+  margin-left: 24px; */
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+.intro-overview__box {
+  width: 100%;
+  position: absolute;
 }
 .intro__overview {
-  flex-basis: 35%;
+  /* flex-basis: 35%; */
+  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .intro__title {
-  max-width: 400px;
+  /* max-width: 400px; */
   margin-bottom: 40px;
   font-size: 48px;
   font-weight: 700;
@@ -31,7 +53,7 @@ body {
   /* padding-right: 100px; */
 }
 .intro__desc {
-  max-width: 360px;
+  /* max-width: 360px; */
   margin-bottom: 40px;
   /* padding-right: 10%; */
   font-size: 18px;
@@ -48,12 +70,15 @@ body {
   font-weight: 600;
 }
 .intro-cards {
-  flex-basis: 60%;
+  position: relative;
+  margin-left: auto;
+  /* flex-basis: 60%; */
+  width: 60%;
   /* flex-grow: 3; */
   display: flex;
   flex-wrap: none;
   flex-direction: row;
-  width: 100%;
+  /* width: 100%; */
   overflow: scroll;
   white-space: nowrap;
 }
@@ -117,13 +142,17 @@ body {
 .flow-card__title {
   width: 100%;
   white-space: normal;
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-style: normal;
   font-size: 18px;
   font-weight: 800;
   line-height: 24px;
 }
 .flow-card__desc {
   width: 100%;
-  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 0;
   font-size: 14px;
   font-weight: normal;
   line-height: 18px;

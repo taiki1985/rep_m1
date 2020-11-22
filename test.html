@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEST</title>
+</head>
+<style>
+  .main_box {
+    display: flex;
+    align-items: center;
+    /* align-items: stretch; */
+    height: 700px;
+    position: relative;
+    background-color: antiquewhite;
+  }
+  .title {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    width: 100px;
+    height: 30px;
+    background-color: black;
+  }
+  .leftSide {
+    /* position: absolute; */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1760px;
+    width: 100%;
+    background-color: aqua;
+  }
+  .leftSide__content {
+    width: 30%;
+    background-color: cadetblue;
+  }
+  .rightSide {
+    width: 60%;
+    position: relative;
+    /* position: stretch; */
+    /* z-index: 1; */
+    margin-left: auto;
+    height: 500px;
+    background-color: chocolate;
+  }
+  .button {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+  }
+</style>
+<body>
+  <div class="main_box">
+    <div class="title">Title</div>
+    <div class="leftSide">
+      <div class="leftSide__content">
+        <div class="leftSide__content__title">HogeHoge</div>
+        <div class="leftSide__content__desc">こんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちはこんにちは</div>
+        <div class="leftSide__content__foooter">ボタン</div>
+      </div>
+    </div>
+    <div class="rightSide">
+      Hey
+    </div>
+    <div class="button">Button</div>
+  </div>
+</body>
+</html>
