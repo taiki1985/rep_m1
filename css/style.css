@@ -1,66 +1,52 @@
 body {
   font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
 }
-.main__container {
-  margin: 0 0 0 80px;
-}
-/* .intro {
-  margin-top: 64px;
-  margin-bottom: 125px;
-  display: flex;
-  flex-wrap: none;
-  flex-direction: row;
-  justify-content: space-between;
-} */
 .intro {
+  border-bottom: 1px #DDDDDD solid;
   display: flex;
   align-items: center;
   position: relative;
   flex-direction: row;
-  height: 765px;
+  height: 768px;
 }
-/* .intro-header__logo {
-  padding-top: 24px;
-  margin-left: 24px;
-  position: absolute;
-  top: 24px;
-  left: 24px;
-} */
 .intro-header {
-  /* padding-top: 24px;
-  margin-left: 24px; */
   position: absolute;
   top: 24px;
   left: 24px;
 }
-.intro-overview__box {
+.intro-overview {
   width: 100%;
   position: absolute;
 }
-.intro__overview {
-  /* flex-basis: 35%; */
-  width: 30%;
+.intro-overview-box {
+  width: 35%;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.intro__title {
-  /* max-width: 400px; */
+.intro-overview-box-content {
+  width: 100%;
+  padding-left: 80px;
+  padding-right: 24px;
+}
+.intro-title {
+  max-width: 400px;
   margin-bottom: 40px;
+  /* padding-left: 80px; */
   font-size: 48px;
   font-weight: 700;
   line-height: 48px;
-  /* padding-right: 100px; */
 }
-.intro__desc {
-  /* max-width: 360px; */
+.intro-desc {
+  max-width: 360px;
+  /* max-width: 400px; */
   margin-bottom: 40px;
-  /* padding-right: 10%; */
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
 }
-.intro__button {
+.intro-button {
   border: 0px;
   border-radius: 10px;
   width: 135px;
@@ -72,13 +58,10 @@ body {
 .intro-cards {
   position: relative;
   margin-left: auto;
-  /* flex-basis: 60%; */
   width: 60%;
-  /* flex-grow: 3; */
   display: flex;
   flex-wrap: none;
   flex-direction: row;
-  /* width: 100%; */
   overflow: scroll;
   white-space: nowrap;
 }
@@ -104,13 +87,35 @@ body {
   line-height: 20px;
 }
 .intro-card__link {
+  margin: 0;
   color: #000000;
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
   text-decoration: underline;
 }
+.intro-slider {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  flex-direction: row;
+}
+.slider__frame {
+  width: 33px;
+  height: 33px;
+  border: solid 1px #000000;
+  border-radius: 50%;
+  text-align: center;
+}
+.slider__content {
+  line-height: 30px;
+}
 /* フロー部分 */
+.flow {
+  padding-left: 80px;
+  height: calc(670px - 75px);
+}
 .flow__title {
   margin-top: 75px;
   margin-bottom: 55px;
@@ -160,7 +165,10 @@ body {
 }
 /* Choice部分 */
 .choice {
-  margin-bottom: 80px;
+  border-bottom: 1px #DDDDDD solid;
+  height: 365px;
+  padding-left: 80px;
+  /* padding-bottom: 45px; */
 }
 .choice-cards {
   display: flex;
@@ -193,6 +201,10 @@ body {
   line-height: 24px;
 }
 /* Assuarance部分 */
+.assurance {
+  height: calc(619px - 75px);
+  padding-left: 80px;
+}
 .assurance-cards {
   display: flex;
   flex-wrap: none;
@@ -200,6 +212,10 @@ body {
   width: 100%;
   overflow: scroll;
   white-space: nowrap;
+}
+.assurance-card {
+  width: 28%;
+  margin-right: 80px;
 }
 .assurance__title {
   margin-top: 75px;
@@ -209,8 +225,6 @@ body {
   line-height: 48px;
 }
 .assurance-card__img {
-  /* width: 185px;
-  height: 125px; */
   border-radius: 10px;
   margin-right: 28px;
   margin-bottom: 24px;
@@ -236,12 +250,54 @@ body {
   font-weight: 600;
   line-height: 20px;
   text-decoration: underline;
+  white-space: normal;
 }
 /* Check部分 */
 .check {
   background-color: #F2ECE2;
+  width: 100%;
 }
-
+.check-outline {
+  padding-left: 80px;
+}
+.check-content {
+  display: flex;
+  flex-direction: row;
+  height: 580px;
+  position: relative;
+  align-items: center;
+}
+.check-overview {
+  width: 43%;
+}
+.check-subtitle {
+  line-height: 22px;
+  font-size: 18px;
+  font-weight: 800;
+}
+.check-title {
+  line-height: 48px;
+  font-size: 42px;
+  font-weight: 800;
+}
+.check-price {
+  color: #e41e57;
+}
+.check-link {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #484848;
+  text-decoration: underline;
+}
+.check-question {
+  position: absolute;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 544px;
+  height: 432px;
+  background-color: white;
+}
 /* Support部分 */
 .support {
   display: flex;
