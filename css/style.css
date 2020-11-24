@@ -301,12 +301,20 @@ body {
 /* Support部分 */
 .support {
   display: flex;
+  height: 736px;
+  width: 100%;
   flex-direction: row;
 }
-.support__title {
+.support-title {
   flex: 1;
+  padding-left: 80px;
 }
-.support__overview {
+.support-title__content {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 48px;
+}
+.support-overview {
   flex: 1;
 }
 .support-card {
