@@ -1,6 +1,26 @@
 body {
   font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
 }
+.header {
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  height: 72px;
+  background-color: white;
+  box-shadow: 0px 5px 20px rgb(214, 214, 214);
+}
+.header-button {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: 86px;
+  height: 34px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+}
 .intro {
   border-bottom: 1px #DDDDDD solid;
   display: flex;
@@ -9,7 +29,7 @@ body {
   flex-direction: row;
   height: 768px;
 }
-.intro-header {
+.intro-header__logo {
   position: absolute;
   top: 24px;
   left: 24px;
@@ -46,23 +66,16 @@ body {
   font-weight: 400;
   line-height: 24px;
 }
-/* .intro-button {
-  border: 0px;
-  border-radius: 10px;
+.intro-button {
   width: 135px;
   height: 55px;
-  background: linear-gradient(#E61E4F,#D70665);
-  color: white;
   font-weight: 600;
-} */
+}
 .start-button {
   border: 0px;
   border-radius: 10px;
-  width: 135px;
-  height: 55px;
   background: linear-gradient(#E61E4F,#D70665);
   color: white;
-  font-weight: 600;
 }
 .intro-cards {
   position: relative;
