@@ -43,6 +43,9 @@
           <!-- /.intro__overview-box -->
         </div>
         <!-- /.intro__overview -->
+        <div class="intro-cards-shadow">
+        </div>
+        <!-- /.intro-cards-shadow -->
         <div class="intro-cards">
           <div class="intro-card">
             <img class="intro-card__img" src="img/1.jpg">
@@ -50,42 +53,42 @@
             <p class="intro-card__desc">アトランタでタイニーハウスをホスティング</p>
             <a href="#" class="intro-card__link">タイニーハウスをチェック</a>
           </div>
-        <!-- /.intro-card -->
-          <div class="intro-card">
-            <img class="intro-card__img" src="img/2.jpg">
-            <p class="intro-card__title">Candidaさん＆Jeffさん</p>
-            <p class="intro-card__desc">ジョシュア・ツリーで一軒家をホスティング</p>
-            <a href="#" class="intro-card__link">一軒家をチェック</a>
-          </div>
-        <!-- /.intro-card -->
-          <div class="intro-card">
-            <img class="intro-card__img" src="img/3.jpg">
-            <p class="intro-card__title">Ryoさん</p>
-            <p class="intro-card__desc">小松でファームステイをホスティング</p>
-            <a href="#" class="intro-card__link">ファームステイをチェック</a>
-          </div>
-        <!-- /.intro-card -->
-          <div class="intro-card">
-            <img class="intro-card__img" src="img/4.jpg">
-            <p class="intro-card__title">Sophieさん</p>
-            <p class="intro-card__desc">パリでロフトをホスティング</p>
-            <a href="#" class="intro-card__link">ロフトをチェック</a>
-          </div>
-        <!-- /.intro-card -->
-          <div class="intro-card">
-            <img class="intro-card__img" src="img/5.jpg">
-            <p class="intro-card__title">Nancyさん</p>
-            <p class="intro-card__desc">サンフランシスコで個室をホスティング</p>
-            <a href="#" class="intro-card__link">個室をチェック</a>
-          </div>
-        <!-- /.intro-card -->
+          <!-- /.intro-card -->
+            <div class="intro-card">
+              <img class="intro-card__img" src="img/2.jpg">
+              <p class="intro-card__title">Candidaさん＆Jeffさん</p>
+              <p class="intro-card__desc">ジョシュア・ツリーで一軒家をホスティング</p>
+              <a href="#" class="intro-card__link">一軒家をチェック</a>
+            </div>
+          <!-- /.intro-card -->
+            <div class="intro-card">
+              <img class="intro-card__img" src="img/3.jpg">
+              <p class="intro-card__title">Ryoさん</p>
+              <p class="intro-card__desc">小松でファームステイをホスティング</p>
+              <a href="#" class="intro-card__link">ファームステイをチェック</a>
+            </div>
+          <!-- /.intro-card -->
+            <div class="intro-card">
+              <img class="intro-card__img" src="img/4.jpg">
+              <p class="intro-card__title">Sophieさん</p>
+              <p class="intro-card__desc">パリでロフトをホスティング</p>
+              <a href="#" class="intro-card__link">ロフトをチェック</a>
+            </div>
+          <!-- /.intro-card -->
+            <div class="intro-card">
+              <img class="intro-card__img" src="img/5.jpg">
+              <p class="intro-card__title">Nancyさん</p>
+              <p class="intro-card__desc">サンフランシスコで個室をホスティング</p>
+              <a href="#" class="intro-card__link">個室をチェック</a>
+            </div>
+          <!-- /.intro-card -->
         </div>
         <!-- /.intro-cards -->
         <div class="intro-slider">
-          <div class="slider__frame intro-slider-right">
+          <div class="slider__frame intro-slider-left">
             <span class="slider__content intro-slider-right__content">&lt;</span>
           </div>
-          <div class="slider__frame intro-slider-left">
+          <div class="slider__frame intro-slider-right">
             <span class="slider__content intro-slider-left__content">&gt;</span>
           </div>
         </div>
@@ -380,11 +383,13 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- Jquery -->
     <script>
+      // ※ヘッダー表示
       jQuery(function ($) {
         let header = $(".header");
         // 表示位置
@@ -396,18 +401,50 @@
           if (winTop >= headerTop) {
             if (showFlag == false) {
               showFlag = true;
-              // header.css("display", '');
-              // header.css("display", 'flex');
               header.show();
             }
           } else if (winTop <= headerTop) {
             if (showFlag) {
               showFlag = false;
-              // header.css("display", 'flex');
-              // header.css("display", 'none');
               header.hide();
             }
           }
+        });
+      });
+
+      // イントロカードスクロールぼかし
+      jQuery(function($){
+        let intro_cards = $(".intro-cards");
+        showFlag = false;
+        intro_cards.scroll(function() {
+          if (intro_cards.scrollLeft() > 0) {
+            if (showFlag == false) {
+              showFlag = true;
+              $(".intro-cards-shadow").show();
+            }
+          } else {
+            if (showFlag) {
+              showFlag = false;
+              $(".intro-cards-shadow").hide();
+            }
+          }
+        });
+      });
+      // クリックスクロール
+      // 左
+      jQuery(function($){
+        $(".intro-slider-left").click(function() {
+          let i = $(".intro-cards").scrollLeft();
+          i -= 360;
+          $(".intro-cards").animate({scrollLeft:i});
+        });
+      });
+      // 右
+      jQuery(function($){
+        $(".intro-slider-right").click(function() {
+          let i = $(".intro-cards").scrollLeft();
+          i += 360;
+          $(".intro-cards").animate({scrollLeft: i});
         });
       });
     </script>
