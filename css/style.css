@@ -161,6 +161,11 @@ body {
   font-weight: 700;
   line-height: 48px;
 }
+.flow-box {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
 .flow-cards {
   display: flex;
   flex-wrap: none;
@@ -168,6 +173,44 @@ body {
   width: 100%;
   overflow: scroll;
   white-space: nowrap;
+}
+.flow-cards::-webkit-scrollbar {
+  display:none;
+}
+.flow-cards-shadow {
+  width: 65px;
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+.flow-cards-shadow-left {
+  display: none;
+  box-shadow: inset 30px 20px 20px white;
+  top: 0;
+  left: 0;
+}
+.flow-slider__frame {
+  width: 33px;
+  height: 33px;
+  border: solid 1px #000000;
+  border-radius: 50%;
+  text-align: center;
+}
+.flow-slider-left {
+  position: absolute;
+  top:25%;
+}
+.flow-slider-right {
+  position: absolute;
+  bottom:25%;
+}
+.flow-cards-shadow-right {
+  /* transform: scale(1, -1); */
+  transform: rotate(180deg);
+  box-shadow: inset 30px 20px 20px white;
+  top: 0;
+  right: 0;
 }
 .flow-card {
   display: flex;
