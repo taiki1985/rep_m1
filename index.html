@@ -465,14 +465,38 @@
 
       // フロウカードスクロールぼかし
       // 左
+      // jQuery(function($){
+      //   let flow_cards = $(".flow-cards");
+      //   showFlag = false;
+      //   flow_cards.scroll(function() {
+      //     if (flow_cards.scrollLeft() > 0) {
+      //       if (showFlag == false) {
+      //         showFlag = true;
+      //         $(".flow-cards-shadow-left").show();
+      //       }
+      //     } else {
+      //       if (showFlag) {
+      //         showFlag = false;
+      //         $(".flow-cards-shadow-left").hide();
+      //       }
+      //     }
+      //   });
+      // });
       jQuery(function($){
         let flow_cards = $(".flow-cards");
+        var maxX = flow_cards.scrollWidth - flow_cards.clientWidth;
+        console.log(maxX)
         showFlag = false;
         flow_cards.scroll(function() {
           if (flow_cards.scrollLeft() > 0) {
             if (showFlag == false) {
               showFlag = true;
               $(".flow-cards-shadow-left").show();
+            }
+          } else if (showFlag) {
+            if (showFlag) {
+              showFlag = false;
+              $(".flow-cards-shadow-right").hide();
             }
           } else {
             if (showFlag) {
@@ -482,25 +506,6 @@
           }
         });
       });
-      // フロウカードスクロールぼかし
-      // 右
-      // jQuery(function($){
-      //   let flow_cards = $(".flow-cards");
-      //   showFlag = false;
-      //   flow_cards.scroll(function() {
-      //     if (flow_cards.scrollLeft() == flow_cards.width()) {
-      //       if (showFlag == false) {
-      //         showFlag = true;
-      //         $(".flow-cards-shadow-right").hide();
-      //       }
-      //     } else {
-      //       if (showFlag) {
-      //         showFlag = false;
-      //         $(".flow-cards-shadow-right").show();
-      //       }
-      //     }
-      //   });
-      // });
     </script>
   </body>
 </html>
