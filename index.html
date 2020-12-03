@@ -239,11 +239,101 @@
             </div>
             <!-- /.check__overview -->
             <div class="check-question">
-              <p class="check-desc">予想ホスティング収入額を更新するにはお部屋についてさらに詳しくお聞かせください</p>
-              <form action="#" class="check__form">
-              </form>
+              <div class="check-question-content">
+                <form action="#" class="check-form">
+                  <div class="check-question-top">
+                    <div class="check-question-shadow"></div>
+                    <p class="check-desc">予想ホスティング収入額を更新するにはお部屋についてさらに詳しくお聞かせください</p>
+                    <div class="initial-questions">
+                      <div class="questions-box questions-address">
+                        <input type="text" class="questions-text questions-address__input" placeholder="所在地">
+                      </div>
+                      <!-- /.questions-box -->
+                      <div class="questions-box questions-roomtype">
+                        <select name="#" id="#" class="questions-text questions-roomtype__select">
+                          <option value="#">まるまる貸切</option>
+                        </select>
+                      </div>
+                      <!-- /.questions-box -->
+                      <div class="questions-box questions-num">
+                        <!-- <select name="#" id="#" class="questions-text questions-num__select"> -->
+                        <select name="#" id="#" class="questions-select questions-num__select">
+                          <option value="#">ゲスト0人</option>
+                          <option value="#">ゲスト1人</option>
+                          <option value="#">ゲスト2人</option>
+                          <option value="#">ゲスト3人</option>
+                          <option value="#">ゲスト4人</option>
+                          <option value="#">ゲスト5人</option>
+                          <option value="#">ゲスト6人</option>
+                          <option value="#">ゲスト7人</option>
+                          <option value="#">ゲスト8人</option>
+                          <option value="#">ゲスト9人</option>
+                          <option value="#">ゲスト10人</option>
+                          <option value="#">ゲスト11人</option>
+                          <option value="#">ゲスト12人</option>
+                          <option value="#">ゲスト13人</option>
+                          <option value="#">ゲスト14人</option>
+                          <option value="#">ゲスト15人</option>
+                        </select>
+                      </div>
+                      <!-- /.questions-box -->
+                    </div>
+                    <!-- /.initial-questions -->
+                    <p class="preceding-second-questions">ゲストが利用できる特別なスペースがあればお知らせください</p>
+                    <div class="second-questions">
+                      <div class="questions-box question-building-type">
+                        <select name="#" id="#" class="questions-select question-building-type__select"><option value="#">建物タイプ</option></select>
+                      </div>
+                      <!-- /.questions-box -->
+                      <div class="questions-box question-bedroom">
+                        <select name="#" id="#" class="questions-select question-bedroom__select"><option value="#">寝室</option></select>
+                      </div>
+                      <!-- /.questions-box -->
+                      <div class="questions-box question-bathroom">
+                        <select name="#" id="#" class="questions-select question-bathroom__select"><option value="#">バスルーム</option></select>
+                      </div>
+                      <!-- /.questions-box -->
+                    </div>
+                    <!-- /.second-questions -->
+                    <p class="preceding-last-questions">特別なアメニティ・設備を追加</p>
+                    <div class="last-questions">
+                      <p class="last-questions-desc">ゲストに人気の特別なアメニティ・設備がある場合は、お知らせください</p>
+                      <div class="questions-checkbox-area">
+                        <div class="questions-checkbox-box">
+                          <input type="checkbox" name="#" value="#" id="gym" class="questions-checkbox-box__input"><label for="gym">ジム</label>
+                        </div>
+                        <!-- /.questions-checkbox-box -->
+                        <div class="questions-checkbox-box">
+                          <input type="checkbox" name="#" value="#" id="bath" class="questions-checkbox-box__input"><label for="bath">露天風呂・ジャグジー</label>
+                        </div>
+                        <!-- /.questions-checkbox-box -->
+                        <div class="questions-checkbox-box">
+                          <input type="checkbox" name="#" value="#" id="pool" class="questions-checkbox-box__input"><label for="pool">プール</label>
+                        </div>
+                        <!-- /.questions-checkbox-box -->
+                        <div class="questions-checkbox-box">
+                          <input type="checkbox" name="#" value="#" id="waterfront" class="questions-checkbox-box__input"><label for="waterfront">ウォーターフロント</label>
+                        </div>
+                        <!-- /.questions-checkbox-box -->
+                        <div class="questions-checkbox-box">
+                          <input type="checkbox" name="#" value="#" id="beachfront" class="questions-checkbox-box__input"><label for="beachfront">ビーチフロント</label>
+                        </div>
+                        <!-- /.questions-checkbox-box -->
+                      </div>
+                      <!-- /.questions-checkbox-area -->
+                    </div>
+                    <!-- /.last-questions -->
+                  </div>
+                  <!-- /.check-question-top -->
+                  <div class="check-button-box">
+                    <input type="submit" value="リスティングの掲載をはじめる" class="check-button">
+                  </div>
+                  <!-- /.check-button-box -->
+                </form>
+              </div>
+              <!-- /.check__question-content -->
             </div>
-            <!-- /.check__question -->
+            <!-- /.check-question -->
           </div>
           <!-- /.check-content -->
         </div>
@@ -404,6 +494,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- Jquery -->
     <script>
+
       // ※ヘッダー表示
       jQuery(function ($) {
         let header = $(".header");
@@ -445,20 +536,19 @@
           }
         });
       });
+
       // クリックスクロール
       // 左
       jQuery(function($){
         $(".intro-slider-left").click(function() {
-          let i = $(".intro-cards").scrollLeft();
-          i -= 360;
+          let i = $(".intro-cards").scrollLeft() - 360;
           $(".intro-cards").animate({scrollLeft:i});
         });
       });
       // 右
       jQuery(function($){
         $(".intro-slider-right").click(function() {
-          let i = $(".intro-cards").scrollLeft();
-          i += 360;
+          let i = $(".intro-cards").scrollLeft() + 360;
           $(".intro-cards").animate({scrollLeft: i});
         });
       });

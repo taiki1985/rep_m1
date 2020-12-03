@@ -373,11 +373,132 @@ body {
 }
 .check-question {
   position: absolute;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px lightgray;
   left: 75%;
   transform: translateX(-50%);
   width: 544px;
   height: 432px;
   background-color: white;
+}
+.check-question-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 35px 30px;
+}
+.check-question-top {
+  height: 310px;
+  overflow: scroll;
+}
+.initial-questions {
+  width: 480px;
+}
+.questions-box {
+  height: 56px;
+  border: solid lightgray 1px;
+}
+.questions-box + .questions-box {
+  border-top: none;
+}
+.questions-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+.questions-address {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.questions-address__input {
+  border: 0;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+}
+.questions-address__input:focus {
+  outline: none;
+}
+.questions-roomtype__select {
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+.questions-num {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.questions-num__select {
+  border: 0;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+}
+.questions-num__select:focus {
+  outline: none;
+}
+.check-desc {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #222222;
+}
+.question-building-type {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.question-bathroom {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.questions-select {
+  border: 0;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+}
+.questions-checkbox-area {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 126px;
+}
+.questions-checkbox-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.questions-checkbox-box > label {
+  margin: 0;
+}
+.questions-checkbox-box__input {
+  width: 23px;
+  height: 23px;
+  /* line-height: 23px; */
+  margin-right: 15px;
+  border-color: lightgray;
+  text-align: center;
+}
+.check-button-box {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 56px;
+}
+.check-button {
+  border-radius: 10px;
+  border: none;
+  width: inherit;
+  height: inherit;
+  background-color: #000000;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
 }
 /* Support部分 */
 .support {
