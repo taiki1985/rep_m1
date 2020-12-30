@@ -482,22 +482,28 @@
       //     }
       //   });
       // });
+
       jQuery(function($){
         let flow_cards = $(".flow-cards");
-        var maxX = flow_cards.scrollWidth - flow_cards.clientWidth;
-        console.log(maxX)
         showFlag = false;
         flow_cards.scroll(function() {
-          if (flow_cards.scrollLeft() > 0) {
-            if (showFlag == false) {
-              showFlag = true;
+          // if (flow_cards.scrollLeft() > 0) {
+          if (this.scrollLeft < 500) {
+            // if (showFlag == false) {
+            //   showFlag = true;
+            //   $(".flow-cards-shadow-left").show();
+            // }
+            console.log("OK")
               $(".flow-cards-shadow-left").show();
-            }
-          } else if (showFlag) {
-            if (showFlag) {
-              showFlag = false;
-              $(".flow-cards-shadow-right").hide();
-            }
+            
+          // } else if (this.scrollLeft == this.scrollWidth - this.clientWidth) {
+          } else if (this.scrollLeft() > 800) {
+            // if (showFlag) {
+            //   showFlag = false;
+            // }
+            // $(".flow-cards-shadow-right").hide();
+            // $(".flow-cards-shadow").hide();
+            console.log("22")
           } else {
             if (showFlag) {
               showFlag = false;
@@ -506,6 +512,18 @@
           }
         });
       });
+
+      // jQuery(function($){
+      //   let flow_cards = $(".flow-cards");
+      //   showFlag = false;
+      //   flow_cards.scroll(function() {
+      //     // console.log(this.clientWidth);
+      //     console.log(this.scrollLeft)
+      //     // console.log(this.scrollWidth);
+      //     console.log(this.scrollWidth - this.clientWidth);
+      //   });
+      // });
+
     </script>
   </body>
 </html>
