@@ -240,23 +240,53 @@
             <!-- /.check__overview -->
             <div class="check-question">
               <div class="check-question-content">
+                <div class="roomtype-select-content">
+                  <div class="roomtype-select">
+                    <p class="roomtype-select__title">まるまる貸切</p>
+                    <div class="roomtype-select-bottom">
+                      <p class="roomtype-select__desc">ゲストはお部屋をまるまる独り占めできます。専用玄関があり、共有スペースはありません。通常、寝室、バスルーム、キッチンが含まれます。</p>
+                      <div class="roomtype-check roomtype-check_checked">○</div>
+                    </div>
+                    <!-- /.roomtype-select-bottom -->
+                  </div>
+                  <!-- /.roomtype-room-charter -->
+                  <div class="roomtype-select">
+                    <p class="roomtype-select__title">個室</p>
+                    <div class="roomtype-select-bottom">
+                      <p class="roomtype-select__desc">就寝時はゲスト専用の個室を利用します。その他のエリアは共用の場合があります。</p>
+                      <div class="roomtype-check"></div>
+                    </div>
+                    <!-- /.roomtype-select-bottom -->
+                  </div>
+                  <!-- /.roomtype-private -->
+                  <div class="roomtype-select">
+                    <p class="roomtype-select__title">シェアルーム</p>
+                    <div class="roomtype-select-bottom">
+                      <p class="roomtype-select__desc">ゲストの寝室は他者と共有する場合のある相部屋または共用エリアとなります。</p>
+                      <div class="roomtype-check"></div>
+                    </div>
+                    <!-- /.roomtype-select-bottom -->
+                  </div>
+                  <!-- /.roomtype-share -->
+                </div>
+                <!-- /.roomtype-select-content -->
                 <form action="#" class="check-form">
+                  <div class="questions-roomtype">
+                  </div>
+                  <!-- /.questions-roomtype -->
                   <div class="check-question-top">
-                    <div class="check-question-shadow"></div>
-                    <p class="check-desc">予想ホスティング収入額を更新するにはお部屋についてさらに詳しくお聞かせください</p>
-                    <div class="initial-questions">
-                      <div class="questions-box questions-address">
-                        <input type="text" class="questions-text questions-address__input" placeholder="所在地">
-                      </div>
-                      <!-- /.questions-box -->
-                      <div class="questions-box questions-roomtype">
-                        <select name="#" id="#" class="questions-text questions-roomtype__select">
-                          <option value="#">まるまる貸切</option>
-                        </select>
-                      </div>
-                      <!-- /.questions-box -->
-                      <div class="questions-box questions-num">
-                        <!-- <select name="#" id="#" class="questions-text questions-num__select"> -->
+                      <div class="check-question-shadow"></div>
+                      <p class="check-desc">予想ホスティング収入額を更新するにはお部屋についてさらに詳しくお聞かせください</p>
+                      <div class="initial-questions">
+                        <div class="questions-box questions-address">
+                          <input type="text" class="questions-text questions-address__input" placeholder="所在地">
+                        </div>
+                        <div class="questions-box questions-roomtype-select">
+                          まるまる貸切
+                        </div>
+                        <!-- /.questions-box -->
+                        <div class="questions-box questions-num">
+                          <!-- <select name="#" id="#" class="questions-text questions-num__select"> -->
                         <select name="#" id="#" class="questions-select questions-num__select">
                           <option value="#">ゲスト0人</option>
                           <option value="#">ゲスト1人</option>
@@ -279,7 +309,7 @@
                       <!-- /.questions-box -->
                     </div>
                     <!-- /.initial-questions -->
-                    <p class="preceding-second-questions">ゲストが利用できる特別なスペースがあればお知らせください</p>
+                    <p class="preceding-second-questions">＋ ゲストが利用できる特別なスペースがあればお知らせください</p>
                     <div class="second-questions">
                       <div class="questions-box question-building-type">
                         <select name="#" id="#" class="questions-select question-building-type__select"><option value="#">建物タイプ</option></select>
@@ -555,23 +585,6 @@
 
       // フロウカードスクロールぼかし
       // 左
-      // jQuery(function($){
-      //   let flow_cards = $(".flow-cards");
-      //   showFlag = false;
-      //   flow_cards.scroll(function() {
-      //     if (flow_cards.scrollLeft() > 0) {
-      //       if (showFlag == false) {
-      //         showFlag = true;
-      //         $(".flow-cards-shadow-left").show();
-      //       }
-      //     } else {
-      //       if (showFlag) {
-      //         showFlag = false;
-      //         $(".flow-cards-shadow-left").hide();
-      //       }
-      //     }
-      //   });
-      // });
       jQuery(function($){
         let flow_cards = $(".flow-cards");
         var maxX = flow_cards.scrollWidth - flow_cards.clientWidth;
@@ -593,6 +606,87 @@
               showFlag = false;
               $(".flow-cards-shadow-left").hide();
             }
+          }
+        });
+      });
+
+      // 部屋タイプセレクト
+      jQuery(function($){
+        let roomtype = $(".questions-roomtype-select");
+        let roomtype_select = $(".roomtype-select-content");
+        let showFlag = false;
+        $(document).on('click', function(e) {
+          if ($(e.target).closest(roomtype).length) {
+            if (showFlag == false) {
+              showFlag = true;
+              roomtype_select.css('top', roomtype.position().top + roomtype.height() + 4 + 'px');
+              roomtype_select.css('left', 30 + 'px');
+              roomtype.css('border', '2px solid #000000');
+              roomtype.css('border-radius', '5px');
+              $(".check-question-top").css('overflow','hidden');
+              roomtype_select.show();
+            } else {
+              showFlag = false;
+              roomtype_select.hide();
+              $(".check-question-top").css('overflow','scroll');
+            }
+          } else {
+            roomtype_select.hide();
+            roomtype.css('border', '');
+            roomtype.css('border-radius', '');
+          }
+        });
+      });
+    
+      // 部屋タイプセレクト後の挙動
+      jQuery(function($){
+        let questions_roomtype_select = $(".questions-roomtype-select");
+        let roomtype_select = $(".roomtype-select");
+        let roomtype_select_title = $(".roomtype-select__title");
+        roomtype_select.on('click', function(e) {
+          if (e.target.className == "roomtype-select-bottom)
+            questions_roomtype_select[0].innerText = e.target.innerText
+          console.log(this);
+          console.log(e);
+        });
+      });
+     
+      // 人数セレクト
+      jQuery(function($){
+        let guest = $(".questions-num__select");
+        let showFlag = false;
+        $(document).on('click', function(e) {
+          if ($(e.target).closest(guest).length) {
+            if (showFlag == false) {
+              showFlag = true;
+              guest.css('border', '2px solid #000000');
+              guest.css('border-radius', '5px');
+            } else {
+              showFlag = false;
+              guest.css('border', '');
+              guest.css('border-radius', '');
+            }
+          } else {
+            guest.css('border', '');
+            guest.css('border-radius', '');
+          }
+        });
+      });
+      
+      // ２番めの質問集
+      jQuery(function($){
+        let preceding_second_questions = $(".preceding-second-questions");
+        let second_questions = $(".second-questions");
+        let check_question_top = $(".check-question-top");
+        let showFlag = false;
+        preceding_second_questions.on('click', function() {
+          if (!showFlag) {
+            showFlag = true;
+            second_questions.show(100, function() {
+              check_question_top.animate({scrollTop:second_questions.height()});
+            });
+          } else {
+            showFlag = false;
           }
         });
       });
