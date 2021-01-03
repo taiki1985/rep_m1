@@ -77,7 +77,7 @@
           <!-- /.intro-card -->
             <div class="intro-card">
               <img class="intro-card__img" src="img/5.jpg">
-              <p class="intro-card__title">Nancyさん</p>
+              <p class="intro-card__title">Nancyさ</p>
               <p class="intro-card__desc">サンフランシスコで個室をホスティング</p>
               <a href="#" class="intro-card__link">個室をチェック</a>
             </div>
@@ -609,22 +609,48 @@
 
       // フロウカードスクロールぼかし
       // 左
+<<<<<<< HEAD
+      // jQuery(function($){
+      //   let flow_cards = $(".flow-cards");
+      //   showFlag = false;
+      //   flow_cards.scroll(function() {
+      //     if (flow_cards.scrollLeft() > 0) {
+      //       if (showFlag == false) {
+      //         showFlag = true;
+      //         $(".flow-cards-shadow-left").show();
+      //       }
+      //     } else {
+      //       if (showFlag) {
+      //         showFlag = false;
+      //         $(".flow-cards-shadow-left").hide();
+      //       }
+      //     }
+      //   });
+      // });
+
+=======
+>>>>>>> 058adb350fdb3ff9d8c5ba414923901c3559ad83
       jQuery(function($){
         let flow_cards = $(".flow-cards");
-        var maxX = flow_cards.scrollWidth - flow_cards.clientWidth;
-        console.log(maxX)
         showFlag = false;
         flow_cards.scroll(function() {
-          if (flow_cards.scrollLeft() > 0) {
-            if (showFlag == false) {
-              showFlag = true;
+          // if (flow_cards.scrollLeft() > 0) {
+          if (this.scrollLeft < 500) {
+            // if (showFlag == false) {
+            //   showFlag = true;
+            //   $(".flow-cards-shadow-left").show();
+            // }
+            console.log("OK")
               $(".flow-cards-shadow-left").show();
-            }
-          } else if (showFlag) {
-            if (showFlag) {
-              showFlag = false;
-              $(".flow-cards-shadow-right").hide();
-            }
+            
+          // } else if (this.scrollLeft == this.scrollWidth - this.clientWidth) {
+          } else if (this.scrollLeft() > 800) {
+            // if (showFlag) {
+            //   showFlag = false;
+            // }
+            // $(".flow-cards-shadow-right").hide();
+            // $(".flow-cards-shadow").hide();
+            console.log("22")
           } else {
             if (showFlag) {
               showFlag = false;
@@ -634,6 +660,19 @@
         });
       });
 
+<<<<<<< HEAD
+      // jQuery(function($){
+      //   let flow_cards = $(".flow-cards");
+      //   showFlag = false;
+      //   flow_cards.scroll(function() {
+      //     // console.log(this.clientWidth);
+      //     console.log(this.scrollLeft)
+      //     // console.log(this.scrollWidth);
+      //     console.log(this.scrollWidth - this.clientWidth);
+      //   });
+      // });
+
+=======
       // 部屋タイプセレクト
       jQuery(function($){
         let roomtype = $(".questions-roomtype-select");
@@ -742,6 +781,7 @@
           }
         });
       });
+>>>>>>> 058adb350fdb3ff9d8c5ba414923901c3559ad83
     </script>
   </body>
 </html>
