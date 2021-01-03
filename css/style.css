@@ -396,6 +396,7 @@ body {
   width: 480px;
 }
 .questions-box {
+  padding: 0 10px 0;
   height: 56px;
   border: solid lightgray 1px;
   line-height: 55px;
@@ -427,9 +428,9 @@ body {
   position: relative;
 }
 .questions-roomtype-select {
-  /* border: 0; */
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 .roomtype-select-content {
   display: none;
@@ -440,7 +441,6 @@ body {
   background-color: white;
   width: 480px;
   height: auto;
-  /* top: 200px; */
   left: 0;
   z-index: 1;
 }
@@ -448,15 +448,20 @@ body {
   width: 448px;
   height: auto;
   padding: 12px;
+  cursor: pointer;
+  display: flex;
 }
 .roomtype-select__title {
   margin: 0;
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
+  pointer-events: none;
 }
 .roomtype-select-bottom {
-  display: flex;
+  /* display: flex; */
+  pointer-events: none;
+
 }
 .roomtype-select__desc {
   margin: 0;
@@ -465,8 +470,17 @@ body {
   font-size: 14px;
   line-height: 18px;
 }
+.roomtype-check {
+  display: none
+}
 .roomtype-check_checked {
-  padding: 10px;
+  display: table-cell;
+  padding: 0 10px 0;
+  height: inherit;
+  /* line-height: 86px; */
+  vertical-align: middle;
+  /* box-align: center; */
+  /* vertical-align: -100%; */
 }
 .questions-num {
   border-bottom-left-radius: 10px;
@@ -482,7 +496,6 @@ body {
   outline: none;
 }
 .check-desc {
-  margin-top: ;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -502,6 +515,29 @@ body {
   width: 100%;
   height: 100%;
 }
+/* 第２段目質問/ */
+.preceding-second-questions {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.second-questions {
+  display: none;
+}
+/* 最後の質問 */
+.preceding-last-questions {
+  display: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.last-questions {
+  display: none;
+}
 .questions-checkbox-area {
   display: flex;
   flex-direction: column;
@@ -518,24 +554,45 @@ body {
 .questions-checkbox-box > label {
   margin: 0;
 }
-.questions-checkbox-box__input {
+.questions-checkbox-box__input{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: password;
   width: 23px;
   height: 23px;
-  /* line-height: 23px; */
   margin-right: 15px;
   border-color: lightgray;
   text-align: center;
 }
+.questions-checkbox-box__input:after{
+  width: 23px;
+  height: 23px;
+  margin-right: 15px;
+  border-color: lightgray;
+  text-align: center;
+}
+.questions-checkbox-box__input:hover {
+  width: 23px;
+  height: 23px;
+  margin-right: 15px;
+  border-color: black;
+  border: black 2px solid;
+  text-align: center;
+}
+.questions-checkbox-box__input:checked {
+  background-color: #000000;
+}
+/* 送信フォーム */
 .check-button-box {
   position: absolute;
-  /* position: relative; */
   bottom: 35px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   height: 56px;
   padding: 0 35px 0;
-  /* z-index: 1; */
 }
 .check-button {
   border-radius: 10px;
@@ -547,16 +604,6 @@ body {
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
-}
-/* 第２段目質問/ */
-.preceding-second-questions {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 14px;
-  font-weight: 600;
-}
-.second-questions {
-  display: none;
 }
 /* Support部分 */
 .support {
@@ -704,6 +751,12 @@ body {
 }
 .footer-bottom__link {
   color: #484848;
+}
+/* モーダルウィンドウ */
+.modal-w {
+  border: solid 1px black;
+  width: 500px;
+  height: 500px;
 }
 @media screen and (max-width: 1128px) {
   
